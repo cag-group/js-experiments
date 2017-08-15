@@ -47,7 +47,7 @@ class MapWithMap {
 
     // Drawback: Copy to array then use filter() and map()
     console.log('  --- filter entries')
-    Array.from(map.entries()).filter(e => e.key === 'key2').map(e => console.log('    ', e)) // TODO not working
+    Array.from(map.entries()).filter(a => a[0] === 'key2').map(e => console.log('    ', e))
   }
 }
 
