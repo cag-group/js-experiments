@@ -23,7 +23,7 @@ class MapWithObject {
     console.log('  --- for entries')
     for (let k in map) {
       const v = map[k]
-      const e = {key: k, value: map[k]}
+      const e = {key: k, value: v}
       console.log('    ', e)
     }
 
