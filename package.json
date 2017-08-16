@@ -1,3 +1,10 @@
 {
   "name": "js-good-examples",
+  "description": "Various small examples of how to program with Javascript/ES6 in production code 2017",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cag-group/js-good-examples.git"
+  },
+  "author": "CAG",
+  "license": "ISC"
 }
