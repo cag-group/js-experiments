@@ -33,7 +33,7 @@ class MapWithObject {
     console.log('  --- filter values')
     Object.values(map).filter(k => k === 'value2').map(e => console.log('    ', e))
 
-    // Filter entries results needs a utility function or we code that is hard to read
+    // Filter entries needs a small utility function or we get very hard to read code
     console.log('  --- filter entries')
     MapWithObject.entries(map).filter(e => e.key === 'key2').map(e => console.log('    ', e))
   }

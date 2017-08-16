@@ -1,5 +1,5 @@
 /*
-    Examples of how to use a Map-structure implemented with a javascript Map class.
+  Examples of how to use a Map-structure implemented with a javascript Map class.
 */
 class MapWithMap {
   static runTest () {
