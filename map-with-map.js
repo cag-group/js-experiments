@@ -1,5 +1,5 @@
 /*
-  Map implemented with a javascript Map class.
+    Examples of how to use a Map-structure implemented with a javascript Map class.
 */
 class MapWithMap {
   static runTest () {
@@ -29,7 +29,7 @@ class MapWithMap {
       console.log('    ', k, '   ', v)
     }
 
-    // Drawback: filter,map,reduce not implemented for Map
+    // Drawback: filter,map not implemented for Map, have to implement our own, for example like this
     console.log('  --- map forEach value filter')
     {
       const filtered = []
@@ -46,6 +46,7 @@ class MapWithMap {
     Array.from(map.values()).filter(v => v === 'value2').map(e => console.log('    ', e))
 
     // Drawback: Copy to array then use filter() and map()
+    // Drawback: Bad example for an API to put unrelated data in an array (a[0]=key, a[1]=value and not return an object { key: ..., value: ...}
     console.log('  --- filter entries')
     Array.from(map.entries()).filter(a => a[0] === 'key2').map(e => console.log('    ', e))
   }
