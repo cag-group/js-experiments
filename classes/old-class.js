@@ -8,13 +8,20 @@ const oldClassPrototype = {
   },
 }
 
-// Static functions and static data
-function myStaticMethod () {
-  console.log('myStaticMethod in oldClass')
+// Public static functions and public static data
+function myPublicStaticMethod () {
+  console.log('myPublicStaticMethod in oldClass')
 }
-const myStaticData = 4
+const myPublicStaticData = 4
+
+// Private static methods
+function myPrivateStaticMethod () {
+  console.log('myPrivateStaticMethod in oldClass')
+}
 
 // Usage
 const obj = Object.create(oldClassPrototype).init(2)
 obj.myMethod(3)
-myStaticMethod()
+?.myPublicStaticMethod()
+
+module.exports = ?

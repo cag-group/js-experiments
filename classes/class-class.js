@@ -7,13 +7,18 @@ class ClassClass {
     console.log('myMethod in ClassClass, a: %s, objectState: %s', a, this.objectState)
   }
 
-  // Static functions
+  // Public static method
   static myStaticMethod () {
     console.log('myStaticMethod in ClassClass')
   }
 }
 
-// Static data
+// Private static methods
+function myPrivateStaticMethod () {
+  console.log('myPrivateStaticMethod in ClassClass')
+}
+
+// Public static data
 ClassClass.myStaticData = 104
 
 // Usage
@@ -22,3 +27,5 @@ ClassClass.myStaticData = 104
   obj.myMethod(103)
   ClassClass.myStaticMethod()
 }
+
+module.exports = ClassClass

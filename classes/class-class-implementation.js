@@ -17,3 +17,5 @@ ClassClassImplementation.myStaticData = 4
 const obj = new ClassClassImplementation(2)
 obj.myMethod(3)
 ClassClassImplementation.myStaticMethod()
+
+module.exports = ClassClassImplementation

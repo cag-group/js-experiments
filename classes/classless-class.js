@@ -19,3 +19,5 @@ ClasslessClass.myStaticData = 4
 const obj = ClasslessClass(2)
 obj.myMethod(3)
 ClasslessClass.myStaticMethod()
+
+module.exports = ClasslessClass
