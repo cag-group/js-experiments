@@ -49,6 +49,19 @@ class MapWithMap {
     // Drawback: Bad example for an API to put unrelated data in an array (a[0]=key, a[1]=value and not return an object { key: ..., value: ...}
     console.log('  --- filter entries')
     Array.from(map.entries()).filter(a => a[0] === 'key2').map(e => console.log('    ', e))
+
+    console.log('  --- sort entries')
+    {
+      let map = new Map()
+      map.set('key2', 'value2')
+      map.set('key1', 'value1')
+      map.set('key3', 'value3')
+      // https://stackoverflow.com/questions/31158902/is-it-possible-to-sort-a-es6-map-object
+      map = new Map([...map.entries()].sort((a,b) => a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0))
+      for (let e of map.entries()) {
+        console.log('    ', e)
+      }
+    }
   }
 }
 

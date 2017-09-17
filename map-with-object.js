@@ -36,10 +36,30 @@ class MapWithObject {
     // Filter entries needs a small utility function or we get very hard to read code
     console.log('  --- filter entries')
     MapWithObject.entries(map).filter(e => e.key === 'key2').map(e => console.log('    ', e))
+
+    console.log('  --- sort entries')
+    {
+      let map = {}
+      map['key2'] = 'value2'
+      map['key1'] = 'value1'
+      map['key3'] = 'value3'
+      map = MapWithObject.sort(map)
+      for (let k in map) {
+        console.log('    ', k)
+      }
+    }
   }
 
   // Nice to find a neat solution not implementing this
   static entries (map) { return Object.keys(map).map(key => { return {key: key, value: map[key]} }) }
+
+  static sort (map) {
+    const orderedMap = {}
+    Object.keys(map).sort().forEach((key) => {
+      orderedMap[key] = map[key]
+    })
+    return orderedMap
+  }
 }
 
 console.log('MapWithObject----------------------------------------')
