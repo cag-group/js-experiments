@@ -11,7 +11,7 @@ ClassClassImplementation.myStaticMethod = function() {
   console.log('myStaticMethod in ClassClassImplementation')
 }
 
-ClassClassImplementation.myStaticData = 4
+ClassClassImplementation.MY_STATIC_DATA = 4
 
 // Usage
 const obj = new ClassClassImplementation(2)

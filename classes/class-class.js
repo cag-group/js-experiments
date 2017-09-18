@@ -19,10 +19,11 @@ function myPrivateStaticMethod () {
 }
 
 // Public static data
-ClassClass.myStaticData = 104
+ClassClass.MY_STATIC_DATA = 104
 
 // Usage
 {
+  const m = require('./class-class')
   const obj = new ClassClass(102)
   obj.myMethod(103)
   ClassClass.myStaticMethod()
